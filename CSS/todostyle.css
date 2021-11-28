@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-image: url(../image/im9.jpg);
+background-size:cover;
+
+}
+.tablebg{
+    background-color:lightskyblue;
+    overflow-y: scroll;
+    height: 370px;
+    width: 40%;
+    font-weight:700;
+    margin-left:53%;
+   
+}
+
+#imtask{
+    transform: rotate(310deg);
+}
+
+
+.plusbutton{
+    background-color: rgb(48, 102, 202);
+    border: none;
+    border-radius: 50%;
+    float: left;
+    transform: rotate(256deg);
+   
+}
+.plusbutton:hover{
+    background-color: rgb(74, 137, 255);
+}
+
+
+.deletebutton{
+    border: none;
+    background-color: transparent;
+    
+}
+
+.strikeout {
+  color:indigo;
+  text-decoration: line-through;
+  background-color: cornflowerblue;
+}
+
+#clickadd{
+    transform: rotate(343deg);
+    float: left;
+    margin-left: 0.5%;
+    
+}
+
+#taskstodo{
+    transform: rotate(312deg);
+    float: left;
+}
+
+.bgcheckedauto{
+    background-color: cornflowerblue;
+}
+
