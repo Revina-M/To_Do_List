@@ -45,7 +45,7 @@ background-size:cover;
 .strikeout {
   color:indigo;
   text-decoration: line-through;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 
 #clickadd{
@@ -60,7 +60,4 @@ background-size:cover;
     float: left;
 }
 
-.bgcheckedauto{
-    background-color: cornflowerblue;
-}
 

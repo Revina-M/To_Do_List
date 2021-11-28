@@ -1,11 +1,14 @@
-let response =[];
-var count=0;
+let response =[];   //To store JSON content
+var count=0;        //to count checked tasks
 
+//Reload page while clicking icon and title in navbar
 document.querySelector("#logo").addEventListener("click", load);
 document.querySelector("#todo").addEventListener("click", load);
 
+//Load data from API
 window.addEventListener("load",load);
 
+//Function to load
 function load(){
   count=0;
     var xhttp = new XMLHttpRequest();
@@ -21,6 +24,8 @@ function load(){
     xhttp.send();
 }
 
+
+//Display JSON contents in table
 function displaydata(){
   var list ="";
   for(i=0;i<response.length;i++){
@@ -34,11 +39,12 @@ function displaydata(){
   document.getElementById("data").innerHTML=list;
 }
 
+//To strike out checked tasks
 function strike(cthis) {
-  
+  var i = cthis.parentNode.parentNode.rowIndex;
     cthis.parentNode.parentNode.style.textDecoration = cthis.checked? 'line-through':'none';
     cthis.parentNode.parentNode.style.color = cthis.checked? 'indigo':'blue';
-    // cthis.parentNode.parentNode.style.backgroundColor = cthis.checked? "class='bgcheckedauto'":'lightskyblue';
+    // cthis.parentNode.parentNode.style.backgroundColor = cthis.checked? 'cornflowerblue':'lightskyblue';
     if(cthis.checked==true){
       count++;
       if(count==5){
@@ -53,11 +59,10 @@ function strike(cthis) {
 }
 
 
-        
+//To delete tasks     
 function del_task(dthis)
 {
   var i = dthis.parentNode.parentNode.rowIndex;
-
   response.splice(i,1);
   document.getElementById("mytable").deleteRow(i)
   
@@ -66,7 +71,7 @@ function del_task(dthis)
 
 
 
-
+//To add new tasks
 function submit(){
   var userId = 1;
   var id = response.length + 1;
@@ -74,19 +79,15 @@ function submit(){
   var completed = false;
   if(title.value.trim() !== ''){
 
-
-
   response.push({
     "userId":userId,
     "id":id,
     "title":title.value,
     "completed":completed
   });
-   
-
   
-displaydata();
-title.value='';
+  displaydata();
+  title.value='';
 }
 
 }

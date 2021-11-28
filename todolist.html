@@ -14,7 +14,10 @@
     <script defer src="todocode.js"></script>
     <title>To Do List</title>
 </head>
+
+
 <header>
+<!-- Navbar starts -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -26,24 +29,25 @@
           </div>
         </div>
       </nav>
+<!-- Navbar ends -->
 </header>
+
+
 <body>
     <br>
+<!-- Images and heading -->
     <div>
         <img src="./image/animat-search-color.gif" style="margin-left:67%;position:absolute;" height="300" width="350" alt="search">
      </div>
         <div>
             <img id="imtask" src="./image/animat-linechart-color.gif" height="91" width="180" alt="tasks">
-        </div>
-        
+        </div>     
     <div class="d-flex head" style="width: 100%;">
         <h2 id="taskstodo" style="font-weight: bolder;color: crimson;float: left;">Tasks To Be Done </h2>
     </div>
     
 
-
-   
-    
+<!-- Table starts here -->
     <div class="container tablebg mt-3" >
      
         <table class="table mt-2 table-hover" id="mytable"style=" color:blue; ">
@@ -51,8 +55,11 @@
             <tbody id="data" ></tbody>
         </table>
     </div>
-    
-    <h5 id="clickadd" style="font-style: italic;color:royalblue;font-weight:600;float:left;">Write here & Add more tasks</h5>
+<!-- Table ends here -->
+
+
+<!-- Add button  and heading-->
+    <h5 id="clickadd" style="font-style: italic;color:royalblue;font-weight:600;float:left;">Write here & Add more Tasks</h5>
  
     <div  >
         <button id="addbutton" class="plusbutton"  onclick="submit()">
@@ -60,6 +67,8 @@
         </button>
     </div>
     <br>
+
+<!-- Images  -->
     <div>
         <img src="./image/animat-customize-color.gif" style="margin-left:18%;position: absolute;"  height="300" width="250" alt="abacus">
      </div>
@@ -69,11 +78,12 @@
      </div>
     
 
-      
-
+<!-- Input field for adding tasks     -->
      <div class="col-2">  
             <input class="form-control" style="transform: rotate(343.5deg);border-color: cornflowerblue;border-width: 2px;" id="title" type="text">
         </div>
+
+<!-- Image  -->
         <div>
             <img src="./image/animat-pencil-color.gif" style="margin-left: 10%;" height="200" width="200"  alt="pencil">
         </div>
