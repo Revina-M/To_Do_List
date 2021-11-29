@@ -47,7 +47,6 @@ function strike(cthis) {
     // cthis.parentNode.parentNode.style.backgroundColor = cthis.checked? 'cornflowerblue':'lightskyblue';
     if(cthis.checked==true){
       response[i].completed = true;
-      console.log(response[i].completed);
       count++;
       if(count==5){
         setTimeout(() => { alert("Congrats. 5 Tasks have been Successfully Completed") }, 100);
@@ -55,7 +54,6 @@ function strike(cthis) {
     }
     else{
       response[i].completed = false;
-      console.log(response[i].completed);
       count--;
     }
     
