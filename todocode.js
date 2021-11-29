@@ -46,12 +46,14 @@ function strike(cthis) {
     cthis.parentNode.parentNode.style.color = cthis.checked? 'indigo':'blue';
     // cthis.parentNode.parentNode.style.backgroundColor = cthis.checked? 'cornflowerblue':'lightskyblue';
     if(cthis.checked==true){
+      response[i].completed = true;
       count++;
       if(count==5){
         setTimeout(() => { alert("Congrats. 5 Tasks have been Successfully Completed") }, 100);
       }
     }
     else{
+      response[i].completed = false;
       count--;
     }
     
@@ -63,6 +65,9 @@ function strike(cthis) {
 function del_task(dthis)
 {
   var i = dthis.parentNode.parentNode.rowIndex;
+  if(response[i].completed = true){
+    count--;
+  }
   response.splice(i,1);
   document.getElementById("mytable").deleteRow(i)
   
